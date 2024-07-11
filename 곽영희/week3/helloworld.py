@@ -7,9 +7,9 @@
 #주석 달기, 타입 힌트 달기, 테스트 코드 작성
 class HelloWorld :
     '''이 클래스는 HelloWorld  클래스입니다.'''
-    def __init__(self):
+    def __init__(self, string:str)->None:
        '''이 함수는 초기화 함수입니다.'''
-       pass
+       self.string=string
 
     def HelloCopy1(self, A:int)->str:
         '''
@@ -20,7 +20,6 @@ class HelloWorld :
         result=A*'HelloWorld '
         return result
 
-
     def HelloCopy2(self, A:int)->str:
         '''
         정수를 받아, 문자열을 *정수 만큼 세로로 출력하는 함수입니다.
@@ -30,7 +29,6 @@ class HelloWorld :
         result=A*'HelloWorld\n'
         return result
 
-
     def HelloReverse(self)->str:
         '''
         이 함수는 아무것도 안받아, 그냥 뒤집어서 출력하는 함수입니다.
@@ -39,8 +37,6 @@ class HelloWorld :
         strings = "HelloWorld"
         reverse_string ="".join(reversed(strings))
         return reverse_string
-
-
 
     def HelloRectangle(self, A:int)->str:
         '''
@@ -52,7 +48,7 @@ class HelloWorld :
         return result1
 
 if __name__=="__main__":
-    c=HelloWorld()
+    c=HelloWorld("Hello")
     A=int(input())
     print(c.HelloCopy1(A))
     print(c.HelloCopy2(A))

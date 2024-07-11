@@ -1,0 +1,25 @@
+sqlite> .open mentor.db
+sqlite> create table member(
+(x1...> student_id int primary key,
+(x1...> student_name varchar(16),
+(x1...> student_gender varchar(6));
+sqlite> insert into member values(20234438, '이현진', '남자');
+sqlite> insert into member values(20234022, '최수연', '여자');
+sqlite> insert into member values(20234018, '곽영희', '여자');
+sqlite> insert into member values(20234037, '김효정', '여자');
+sqlite> insert into member values(20204062, '이인규', '남자');
+sqlite> select * from member
+   ...> ;
+20234438|이현진|남자
+20234022|최수연|여자
+20234018|곽영희|여자
+20234037|김효정|여자
+20204062|이인규|남자
+sqlite> select * from member
+   ...> where (student_gender == '남자');
+20234438|이현진|남자
+20204062|이인규|남자
+sqlite> select student_name from member
+   ...> where (student_gender == '남자');
+이현진
+이인규
