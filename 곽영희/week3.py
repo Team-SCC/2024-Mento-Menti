@@ -26,7 +26,7 @@ class calculater :
         이 함수는 나눗셈 함수입니다.
         @param float a:첫번째 매개변수
         @param float b:두번째 매개변수
-        @param float c:나눗셈 결과값
+        
         '''
         try:
           result=A/B
